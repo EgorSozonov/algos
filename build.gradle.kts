@@ -35,5 +35,5 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("tech.sozonov.yainter.MainKt")
+    mainClass.set("tech.sozonov.algos.MainKt")
 }

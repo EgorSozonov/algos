@@ -1,4 +1,4 @@
-package tech.sozonov.yainter.utils
+package tech.sozonov.algos.utils
 
 object Utils {
 

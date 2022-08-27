@@ -1,4 +1,4 @@
-package tech.sozonov.yainter.Knapsack;
+package tech.sozonov.algos.Knapsack;
 import java.lang.Integer.max
 
 

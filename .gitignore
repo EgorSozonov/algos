@@ -1,10 +1,11 @@
 .vs/*
 .vscode/*
 .git/*
+.idea/*
 target/*
 build/*
 .packages
-.dart_tool/*
+
 doc/api/*
 src/.DS_Store
 .DS_Store
@@ -19,10 +20,11 @@ Src/.DS_Store?
 o7.csproj.AssemblyReference.cache
 obj/*
 
-# Ignore Gradle project-specific cache directory
-.gradle
 
 # Ignore Gradle build output directory
 build
-gradle/wrapper/*
-bin/*
+.gradle/*
+_bin/*
+*.bat
+gradlew
+gradle/*
