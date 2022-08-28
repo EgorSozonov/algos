@@ -19,11 +19,10 @@ companion object {
         var curr: LinkedList? = this
         var next: LinkedList? = this.next
         while (curr != null) {
-
             curr.next = prev
             prev = curr
             curr = next
-            next = curr?.next ?: null
+            next = curr?.next
         }
         return prev!!
     }
