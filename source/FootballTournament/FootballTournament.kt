@@ -56,6 +56,12 @@ object FootballTournament {
         return result
     }
 
+    fun solution(inp: String): String {
+        val teamDict = parseMatches(inp)
+        val teamsStanding = sortByPoints(teamDict)
+        return formattedTournamentTable(teamsStanding)
+    }
+
     fun tournamentRunner(): String {
         val inp = """
             Амкар - Спартак - 2:1
@@ -64,10 +70,8 @@ object FootballTournament {
             Краснодар - Спартак - 3:3
             ЦСКА - Спартак - 1:4
             Краснодар - Амкар - 1:1
-        """.trimIndent()
-        val teamDict = parseMatches(inp)
-        val teamsStanding = sortByPoints(teamDict)
-        return formattedTournamentTable(teamsStanding)
+        """
+        return solution(inp)
     }
 
     private fun formattedTournamentTable(sortedTeams: Array<Team>): String {

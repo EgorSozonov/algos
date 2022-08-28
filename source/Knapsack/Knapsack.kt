@@ -7,7 +7,7 @@ import java.lang.Integer.max
  * Memory estimate: maxWeight * (1 + countItems)
  * CPU estimate: maxWeight * countItems
  */
-fun knapsack(input: Pair<IntArray, IntArray>, maxWeight: Int): Triple<Int, Int, List<Int>> {
+fun solution(input: Pair<IntArray, IntArray>, maxWeight: Int): Triple<Int, Int, List<Int>> {
     val inputValues = input.first
     val inputWeights = input.second
     if (inputWeights.isEmpty()) throw IllegalArgumentException("Input array is empty!")
@@ -47,10 +47,10 @@ fun knapsack(input: Pair<IntArray, IntArray>, maxWeight: Int): Triple<Int, Int, 
 }
 
 fun knapsackRunner() {
-    val knapResult = knapsack(Pair(intArrayOf(7, 8, 4), intArrayOf(3, 8, 6)), 10)
+    val knapResult = solution(Pair(intArrayOf(7, 8, 4), intArrayOf(3, 8, 6)), 10)
 
     println("Result of knapsack for is: value ${knapResult.first}, weight ${knapResult.second}, included items: ${knapResult.third.joinToString(", ")}")
 
-    val knapResult2 = knapsack(Pair(intArrayOf(14, 5, 5, 5, 4), intArrayOf(8, 3, 3, 3, 2)), 10)
+    val knapResult2 = solution(Pair(intArrayOf(14, 5, 5, 5, 4), intArrayOf(8, 3, 3, 3, 2)), 10)
     println("Second result of knapsack is: value ${knapResult2.first}, weight ${knapResult2.second}, included items: ${knapResult2.third.joinToString(", ")}")
 }

@@ -35,7 +35,6 @@ companion object {
         while (currA != null) {
             if (currB == null || currA.payload != currB.payload) return false
 
-
             currA = currA.next
             currB = currB.next
         }
